@@ -2,6 +2,28 @@
 function isBouncy($num){
     echo "From a f ", $num;
 }
+function isSpecial($num){
+    $tempNum = $num;
+    $sumOfDigits = 0;
+    $productOfDigits = 1;
+    while ($num>0) {
+        $rem = $num%10;
+        // echo "rem ", $rem, "<br>";
+        $sumOfDigits = $sumOfDigits + $rem;
+        $productOfDigits = $productOfDigits * $rem;
+        $num = (int)($num/10);
+    }
+    $total = $sumOfDigits + $productOfDigits;
+    // echo "sum ", $sumOfDigits, "<br>";
+    // echo "pro ", $productOfDigits, "<br>";
+    // echo "tot ", $total, "<br>";
+    if ($tempNum == $total) {
+        return "True";
+    } else {
+        return "False";
+    }
+    
+}
 function isPalindrome($num){
     
     $reverseNum=0;

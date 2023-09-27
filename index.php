@@ -25,7 +25,8 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $num1 = $_POST["num1"];
     // echo $num1;
-    echo isPalindrome((int)$num1);
+    // echo isPalindrome((int)$num1);
+    echo isSpecial((int)$num1);
 
 }
 ?>
